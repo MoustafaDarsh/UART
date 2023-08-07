@@ -1,0 +1,19 @@
+{signal: [
+  {name: "clk", wave: 'P.....................................' },
+  {name: 'DATA_VALID', wave: '0hl..........hl.........hl...hl'},
+  {name:  'busy', wave: '0.h.........l.h.........lh............'},
+  {name:  'busy_flag', wave: '0..h.........l.h.........lh...'},
+  {name: 'P_DATA_IN', wave: '0==..........==.........==...==......', data: ['DIN1', '0', 'DIN2', '0','DIN3', '0','DIN4','0']},
+   {name: 'P_DATA_IN_REG', wave: '0.=...........=..........=...........', data: ['DIN1', 'DIN2', 'DIN3']},
+  {name: 'state', wave: '=.==.......=====.......====.......==', data: ['IDLE', 'START', 'TXING', 'parity','stop', 'IDLE' ,'START' , 'TXING ', 'parity' , 'stop','START','TXING','parity','stop' ]},
+  {name: 'mux_sel', wave: '=.==.......=====.......====.......==', data: ['1', '0', '2', '3','1', '1','0','2','3','1','0','2','3','1']},
+  {name:  'mux_out', wave: 'h.lh....l.hlh.lhlhl...h..l........h.'},
+  {name: 'tx_out', wave: 'h..lh....l.hlh.lhlhl...h..l........h.'},   
+  {name: 'data_loss', wave: '0.............................hl....'},
+  {},
+
+]}
+// DIN 1 :  11111001
+// DIN2 : 10000101
+// DIN3 : 01000000
+//DIN4 :  01000111 ( WHICH WILL BE LOSS)
